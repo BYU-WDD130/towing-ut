@@ -1,0 +1,380 @@
+:root {
+  --primary-color: #d97706; /* Industrial amber/orange */
+  --primary-hover: #b45309;
+  --dark-color: #0f172a;
+  --light-bg: #f8fafc;
+  --text-main: #334155;
+  --border-color: #e2e8f0;
+  --success-color: #16a34a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  color: var(--text-main);
+  background-color: #ffffff;
+  line-height: 1.5;
+  padding-bottom: 70px; /* Space for mobile sticky call bar */
+}
+
+@media (min-width: 769px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Emergency Bar */
+.top-bar {
+  background-color: #1e293b;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 8px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge-247 {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-color);
+}
+
+.logo-bold {
+  color: var(--primary-color);
+}
+
+.btn-call-header {
+  background-color: var(--dark-color);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.btn-call-header:hover {
+  background-color: #1e293b;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+  }
+}
+
+.rating-badge {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.trust-features {
+  margin-bottom: 25px;
+}
+
+.trust-item {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+.btn-primary-cta {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 16px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary-cta:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Hero Form */
+.hero-form-card {
+  background-color: #ffffff;
+  color: var(--dark-color);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-form-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.hero-form-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-geo {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  padding: 0 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--dark-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #1e293b;
+}
+
+.form-success-msg {
+  display: none;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #dcfce7;
+  color: #15803d;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Services */
+.services, .reviews {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: var(--light-bg);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--dark-color);
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* Reviews */
+.reviews {
+  background-color: var(--light-bg);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.stars {
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.review-author {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: #94a3b8;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Mobile Sticky Call Bar */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+@media (min-width: 769px) {
+  .mobile-sticky-bar {
+    display: none;
+  }
+}
+
+.btn-mobile-call {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
