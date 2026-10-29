@@ -5,21 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>24/7 Towing Service in Spanish Fork, UT | Fast & Reliable</title>
   <meta name="description" content="Stranded in Spanish Fork, UT? 24/7 towing and roadside assistance. 15-30 minute ETA, clear upfront pricing, and licensed professionals.">
+  
+  <!-- Configuración PWA y Web Manifest -->
   <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff6600">
+  
+  <!-- Soporte e Iconos para iOS / iPhone (Safari) -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Towing 24/7">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="apple-touch-icon" href="images/twg.png">
-  <link rel="icon" href="images/tw.png" type="image/png">
-  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-title" content="SpanishForkTowing">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+
+  <!-- Favicons e Iconos estándar -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/tw.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/twg.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EmergencyService",
+  "name": "Spanish Fork Towing Services",
+  "image": "https://247towingservicesut.com/images/towingut.jpeg",
+  "telePhone": "+1-385-448-4939",
+  "url": "https://247towingservicesut.com",
+  "priceRange": "$$",
+  "description": "24/7 emergency towing and roadside assistance across Utah County and Juab County, including Lehi, Provo, Spanish Fork, Payson, and Nephi.",
+  "areaServed": [
+    { "@type": "City", "name": "Lehi", "sameAs": "https://en.wikipedia.org/wiki/Lehi,_Utah" },
+    { "@type": "City", "name": "American Fork" },
+    { "@type": "City", "name": "Orem" },
+    { "@type": "City", "name": "Provo" },
+    { "@type": "City", "name": "Springville" },
+    { "@type": "City", "name": "Spanish Fork" },
+    { "@type": "City", "name": "Payson" },
+    { "@type": "City", "name": "Santaquin" },
+    { "@type": "City", "name": "Nephi" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ],
+    "opens": "07:00",
+    "closes": "11:59"
+  }
+}
+</script>
+
 </head>
 <body>
 
@@ -209,6 +246,16 @@
       <p>&copy; 2026 Spanish Fork Towing Services. All rights reserved.</p>
       <p>24/7 Towing Service in Spanish Fork, Springville, Mapleton, and Utah County.</p>
     </div>
+    <div class="container footer-content">
+    <p>&copy; 2026 Spanish Fork Towing Services. All rights reserved.</p>
+    <p><strong>Service Areas:</strong> 
+      <a href="/towing-lehi-ut.html">Lehi</a> | 
+      <a href="/towing-provo-ut.html">Provo</a> | 
+      <a href="/">Spanish Fork</a> | 
+      <a href="/towing-nephi-ut.html">Nephi</a>
+    </p>
+  </div>
+
   </footer>
 
   <!-- Sticky Bottom Bar (Mobile Only) -->
@@ -220,14 +267,15 @@
 
   <script src="script.js"></script>
 
+  <!-- Registro del Service Worker para PWA -->
   <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((reg) => console.log('Service Worker registrado correctamente'))
-        .catch((err) => console.error('Error al registrar Service Worker:', err));
-    });
-  }
-</script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => console.log('Service Worker registrado correctamente'))
+          .catch((err) => console.error('Error al registrar Service Worker:', err));
+      });
+    }
+  </script>
 </body>
 </html>
