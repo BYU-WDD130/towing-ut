@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 Towing Service in Nephi, UT | Fast & Reliable</title>
+  <meta name="description" content="Stranded on I-15 Exit 222 in Nephi, UT? Fast 24/7 emergency towing, winching, and roadside service across Juab County. Call (385) 448-4939.">
+  
+  <!-- Configuración PWA y Web Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ff6600">
+  
+  <!-- Soporte e Iconos para iOS / iPhone (Safari) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SpanishForkTowing">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+
+  <!-- Favicons e Iconos estándar -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/tw.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/twg.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EmergencyService",
+  "name": "Spanish Fork Towing Services",
+  "image": "https://247towingservicesut.com/images/towingut.jpeg",
+  "telePhone": "+1-385-448-4939",
+  "url": "https://247towingservicesut.com/towing-nephi-ut.html",
+  "priceRange": "$$",
+  "description": "24/7 emergency towing and roadside assistance across Utah County and Juab County, including Lehi, Provo, Spanish Fork, Payson, and Nephi.",
+  "areaServed": [
+    { "@type": "City", "name": "Lehi", "sameAs": "https://en.wikipedia.org/wiki/Lehi,_Utah" },
+    { "@type": "City", "name": "American Fork" },
+    { "@type": "City", "name": "Orem" },
+    { "@type": "City", "name": "Provo" },
+    { "@type": "City", "name": "Springville" },
+    { "@type": "City", "name": "Spanish Fork" },
+    { "@type": "City", "name": "Payson" },
+    { "@type": "City", "name": "Santaquin" },
+    { "@type": "City", "name": "Nephi" }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ],
+    "opens": "07:00",
+    "closes": "11:59"
+  }
+}
+</script>
+
+</head>
+<body>
+
+  <!-- Top Emergency Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span>⚡ Estimated arrival time in Spanish Fork & surrounding areas: <strong>15 - 30 mins</strong></span>
+      <span class="badge-247">24/7 Emergency Service</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-bold">SpanishFork</span>Towing
+      </div>
+      <a href="tel:(385) 448-4939" class="btn btn-call-header">
+        <span class="icon">📞</span> (385) 448-4939
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="rating-badge">
+          ⭐⭐⭐⭐⭐ 4.9/5 (Over 250+ satisfied drivers in Utah County)
+        </div>
+        <h1>Fast & Reliable Towing Service in Nephi, UT</h1>
+        <p class="hero-sub">Reliable highway tow truck service for Juab County, Mona, and I-15 travelers near Nephi. Ready to dispatch 24/7.</p>
+        
+        <div class="trust-features">
+          <div class="trust-item">✓ Clear upfront pricing before dispatch</div>
+          <div class="trust-item">✓ Fully licensed & insured for your peace of mind</div>
+          <div class="trust-item">✓ Support for cars, trucks, and SUVs</div>
+        </div>
+
+        <a href="tel:(385) 448-4939" class="btn btn-primary-cta">
+          🚨 CALL FOR TOWING NOW: (385) 448-4939
+        </a>
+      </div>
+
+      <!-- Quick Request Form -->
+      <div class="hero-form-card">
+        <h3>Fast Quote / Assistance</h3>
+        <p>Fill out the form below and we'll call you back in under 60 seconds.</p>
+
+        <form id="towingForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="e.g. John Doe" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="(385) 448-4939" required>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Current Location</label>
+            <div class="input-with-button">
+              <input type="text" id="location" placeholder="Street name, I-15 mile marker, or landmark" required>
+              <button type="button" id="btnGeo" class="btn-geo" title="Use my current location">📍</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Required Service</label>
+            <select id="service" required>
+              <option value="">Select a service...</option>
+              <option value="towing">Standard Vehicle Towing</option>
+              <option value="jumpstart">Jump Start (Battery)</option>
+              <option value="tire">Flat Tire Change</option>
+              <option value="fuel">Fuel Delivery</option>
+              <option value="lockout">Car Lockout Service</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-submit">Send Urgent Request</button>
+          <div id="formSuccess" class="form-success-msg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services in Spanish Fork & Nearby Areas</h2>
+      <p class="section-subtitle">Covering I-15, US-6, and all residential/commercial areas across Spanish Fork, Springville, and Mapleton.</p>
+      
+      <div class="services-grid">
+        
+        <!-- Service Card 1: Lockouts -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="images/lockouts.avif" alt="Car Lockouts Service" class="service-img">
+          </div>
+          <div class="service-card-body">
+            <h3>Lockouts</h3>
+            <p class="service-time">30 min</p>
+            <p class="service-price">$80</p>
+            <a href="tel:(385) 448-4939" class="btn btn-more-info">Más info</a>
+          </div>
+        </div>
+
+        <!-- Service Card 2: Fast Towing Service -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="images/towingut.jpeg" alt="Fast Towing Service" class="service-img">
+          </div>
+          <div class="service-card-body">
+            <h3>Fast Towing Service</h3>
+            <p class="service-time">1 h - 2 h</p>
+            <p class="service-price">Desde $125</p>
+            <a href="tel:(385) 448-4939" class="btn btn-more-info">Más info</a>
+          </div>
+        </div>
+
+        <!-- Service Card 3: Winchouts -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="images/winchouts.avif" alt="Winchouts Service" class="service-img">
+          </div>
+          <div class="service-card-body">
+            <h3>Winchouts</h3>
+            <p class="service-time">45 min</p>
+            <p class="service-price">$90</p>
+            <a href="tel:(385) 448-4939" class="btn btn-more-info">Más info</a>
+          </div>
+        </div>
+
+        <!-- Service Card 4: Tire Changes -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="images/tire-change.avif" alt="Tire changes Service" class="service-img">
+          </div>
+          <div class="service-card-body">
+            <h3>Tire changes</h3>
+            <p class="service-time">45 min</p>
+            <p class="service-price">$85</p>
+            <a href="tel:(385) 448-4939" class="btn btn-more-info">Más info</a>
+          </div>
+        </div>
+
+        <!-- Service Card 5: Jumpstarts -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="images/jumpstart.avif" alt="Jumpstarts Service" class="service-img">
+          </div>
+          <div class="service-card-body">
+            <h3>Jumpstarts</h3>
+            <p class="service-time">30 min</p>
+            <p class="service-price">$80</p>
+            <a href="tel:(385) 448-4939" class="btn btn-more-info">Más info</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section (Social Proof) -->
+  <section class="reviews">
+    <div class="container">
+      <h2 class="section-title">What Drivers Say About Us</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Got a flat tire on I-15 near Spanish Fork late at night. They arrived in 20 minutes, were super polite, and the price matched exactly what was quoted over the phone."</p>
+          <span class="review-author">— Mark T., Spanish Fork</span>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Outstanding service. Accidentally locked my keys inside on Main Street and they helped me get back in within minutes without a scratch on the door."</p>
+          <span class="review-author">— Sarah R., Springville</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Spanish Fork Towing Services. All rights reserved.</p>
+      <p>24/7 Towing Service in Spanish Fork, Springville, Mapleton, and Utah County.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Bar (Mobile Only) -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:3854484939" class="btn btn-mobile-call">
+      📞 CALL NOW: (385) 448-4939
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Registro del Service Worker para PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => console.log('Service Worker registrado correctamente'))
+          .catch((err) => console.error('Error al registrar Service Worker:', err));
+      });
+    }
+  </script>
+</body>
+</html>
