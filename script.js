@@ -56,5 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1200);
     });
   }
+  
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log('Service Worker registrado correctamente'))
+        .catch((err) => console.error('Error al registrar Service Worker:', err));
+    });
+  }
 
 });
