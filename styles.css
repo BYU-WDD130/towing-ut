@@ -412,8 +412,14 @@ body {
 }
 
 .footer-a {
-  color: #94a3b8;
+  display: inline-block;
+  background-color: #a32222;
+  color: #fff;
+  padding: 0px 2px;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 2px;
 }
 
 /* Mobile Sticky Call Bar */
