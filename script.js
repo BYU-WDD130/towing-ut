@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Automatic location detection via browser geolocation
+  // 1. Detección automática de ubicación por geolocalización
   const btnGeo = document.getElementById('btnGeo');
   const locationInput = document.getElementById('location');
 
@@ -27,35 +27,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Quick Request Form Submission
+  // 2. Envío del formulario mediante Formspree
   const towingForm = document.getElementById('towingForm');
   const formSuccess = document.getElementById('formSuccess');
 
   if (towingForm) {
-    towingForm.addEventListener('submit', (e) => {
+    towingForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const name = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
       const location = document.getElementById('location').value;
+      const service = document.getElementById('service')?.value || 'Not specified';
 
       const submitBtn = towingForm.querySelector('.btn-submit');
       submitBtn.textContent = 'Submitting Request...';
       submitBtn.disabled = true;
 
-      // Simulated webhook/backend call delay
-      setTimeout(() => {
-        towingForm.reset();
+      try {
+        // REEMPLAZA TU_FORM_ID CON EL ID QUE TE DA FORMSPREE
+        const response = await fetch('https://formspree.io/f/xqppdgaa', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            phone: phone,
+            location: location,
+            service: service
+          })
+        });
+
+        if (response.ok) {
+          towingForm.reset();
+          if (btnGeo) btnGeo.textContent = '📍';
+
+          formSuccess.style.display = 'block';
+          formSuccess.textContent = `Thank you ${name}! We have received your request near ${location}. One of our technicians will contact you shortly at ${phone}.`;
+        } else {
+          alert('There was a problem submitting your request. Please call us directly at (385) 448-4939.');
+        }
+      } catch (error) {
+        alert('Connection error. Please call us directly at (385) 448-4939.');
+      } finally {
         submitBtn.textContent = 'Send Urgent Request';
         submitBtn.disabled = false;
-        
-        if (btnGeo) btnGeo.textContent = '📍';
-
-        formSuccess.style.display = 'block';
-        formSuccess.textContent = `Thank you ${name}! We received your request near ${location}. We will call you at ${phone} in under 60 seconds.`;
-      }, 1200);
+      }
     });
   }
-  
 
 });
