@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dcf2fd10-8b5d-4eb8-8fec-293b6679f87f/deploy-status)](https://app.netlify.com/projects/towing-ut/deploys)
