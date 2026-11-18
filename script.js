@@ -27,6 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+//-- esta seccion es de review cards
+
+
+
+
+
+--//
+
+
+
+  
   // 2. Envío del formulario mediante Formspree
   const towingForm = document.getElementById('towingForm');
   const formSuccess = document.getElementById('formSuccess');
