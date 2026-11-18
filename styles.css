@@ -280,6 +280,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  margin: 50px auto;
 }
 
 .service-card {
@@ -413,13 +414,18 @@ body {
 
 .footer-a {
   display: inline-block;
-  background-color: #a32222;
-  color: #fff;
+
+  color: #90caf9;
   padding: 0px 2px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
   border-radius: 2px;
+}
+
+.footer-a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* Mobile Sticky Call Bar */
