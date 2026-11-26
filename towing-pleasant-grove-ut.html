@@ -85,6 +85,21 @@
   gtag('config', 'AW-18554689349');
 </script>
 
+<script>
+  function enviarConversionMejorada(correoCliente, telefonoCliente) {
+    gtag('set', 'user_data', {
+      "email": (correoCliente || "").trim().toLowerCase(),
+      "phone_number": (telefonoCliente || "").trim()
+    });
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18554689349/w4LyCIz6l7odEMWuyI9F',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  }
+</script>
+
 </head>
 <body>
 
